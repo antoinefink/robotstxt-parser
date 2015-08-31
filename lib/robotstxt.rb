@@ -13,19 +13,17 @@
 #
 #++
 
-require 'robotstxt/common'
-require 'robotstxt/parser'
-require 'robotstxt/getter'
+require "robotstxt/common"
+require "robotstxt/parser"
 
 # Provides a flexible interface to help authors of web-crawlers
 # respect the robots.txt exclusion standard.
 #
 module Robotstxt
-
-  NAME            = 'Robotstxt'
-  GEM             = 'robotstxt'
-  AUTHORS         = ['Conrad Irwin <conrad@rapportive.com>', 'Simone Rinzivillo <srinzivillo@gmail.com>']
-  VERSION        = '1.0'
+  NAME            = "Robotstxt"
+  GEM             = "robotstxt"
+  AUTHORS         = ["Conrad Irwin <conrad@rapportive.com>", "Simone Rinzivillo <srinzivillo@gmail.com>"]
+  VERSION        = "1.0"
 
   # Obtains and parses a robotstxt file from the host identified by source,
   # source can either be a URI, a string representing a URI, or a Net::HTTP
@@ -88,6 +86,6 @@ module Robotstxt
   end
 
   def self.ultimate_scrubber(str)
-    str.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => '')
+    str.encode("UTF-8", invalid: :replace, undef: :replace, replace: "")
   end
 end

@@ -14,6 +14,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(text)/})
   gem.require_paths = ["lib"]
 
+  gem.add_dependency "activesupport"
+  gem.add_development_dependency "pry"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "fakeweb", '~> 1.3'
 end
